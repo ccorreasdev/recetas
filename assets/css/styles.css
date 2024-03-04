@@ -28,10 +28,13 @@ body {
 
 .layout__nav {
   height: 80px;
-  background-color: #202020;
+  background-color: #cf9e26;
   margin-bottom: 2rem;
   padding-left: 2rem;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__back {
@@ -43,6 +46,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-shadow: 2px 2px 5px #202020;
+}
+
+.nav__img-container {
 }
 
 .recetas__layout {
@@ -135,7 +142,8 @@ body {
   font-size: 3rem;
   width: 100%;
   text-align: center;
-  background-color: rgb(32, 32, 32);
+  background-color: #cf9e26;
+  text-shadow: 2px 2px 5px #202020;
   margin-top: 2rem;
   padding: 2rem;
   display: inline-block;
@@ -161,6 +169,14 @@ body {
   color: white;
   font-size: 2.4rem;
   padding-bottom: 1rem;
+  background-color: #cf9e26;
+  text-shadow: 2px 2px 5px #202020;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .ingrediente {
@@ -182,6 +198,14 @@ body {
   color: white;
   font-size: 2.4rem;
   padding-bottom: 1rem;
+  background-color: #cf9e26;
+  text-shadow: 2px 2px 5px #202020;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .paso {
@@ -210,4 +234,5 @@ body {
   width: 100%;
   font-size: 2rem;
   text-align: center;
+  border: solid 4px #cf9e26;
 }
