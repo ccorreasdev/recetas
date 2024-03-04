@@ -1,4 +1,6 @@
 const recetasLayout = document.querySelector("#recetas");
+const searchBar = document.querySelector("#search");
+let recetas;
 
 recetasLayout.addEventListener("click", (e) => {
 
@@ -35,7 +37,7 @@ fetch('assets/js/data.json')
         });
         // Aquí puedes manipular o utilizar los datos como desees
 
-
+        recetas = data;
 
         data.forEach(receta => {
             console.log(receta)
@@ -57,3 +59,27 @@ fetch('assets/js/data.json')
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
+
+
+searchBar.addEventListener("input", (e) => {
+
+    recetasLayout.innerHTML = "";
+
+    recetas.forEach(receta => {
+
+        if (receta.nombre.toLowerCase().includes(e.target.value.toLowerCase())) {
+            recetasLayout.innerHTML += `<article class="receta__layout">
+            <a href="#">
+            <div class="receta__nombre">${receta.nombre}</div>
+                <div class="receta__img-container">
+                
+                    <img class="receta__img" src="./assets/img/${receta.nombre}.png" alt="receta">
+                </div>
+            </a>
+        </article>`
+        }
+
+    })
+
+
+})
